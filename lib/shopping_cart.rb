@@ -39,4 +39,8 @@ class ShoppingCart
       product.category == category
     end
   end
+
+  # def percentage_occupied
+  #
+  # end
 end

@@ -2,15 +2,14 @@ class Product
   attr_reader :category,
               :name,
               :unit_price,
-              :quantity,
-              :hoard
+              :quantity
 
   def initialize(category, name, unit_price, quantity)
     @category   = category
     @name       = name
     @unit_price = unit_price.to_f
     @quantity   = quantity.to_i
-    @hoard      = 0
+    @hoarded    = false
   end
 
   def total_price
@@ -18,11 +17,11 @@ class Product
   end
 
   def is_hoarded?
-    if @quantity <= 10
-      return false
-    elsif @quantity = 10
-      return true
-    end
+    @hoarded
+  end
+
+  def hoard
+    @hoarded = true
   end
 
 end

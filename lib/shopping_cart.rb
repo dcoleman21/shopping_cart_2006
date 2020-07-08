@@ -40,7 +40,7 @@ class ShoppingCart
     end
   end
 
-  # def percentage_occupied
-  #
-  # end
+  def percentage_occupied
+    total = (total_number_of_products / @capacity * 100).round(2)
+  end
 end

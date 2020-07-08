@@ -55,7 +55,6 @@ class ShoppingCartTest < Minitest::Test
     cart.add_product(product3)
 
     assert_equal 13, cart.total_number_of_products
-    assert_equal false, cart.is_full?
   end
 
   def test_it_is_full
@@ -68,6 +67,9 @@ class ShoppingCartTest < Minitest::Test
     cart.add_product(product1)
     cart.add_product(product2)
     cart.add_product(product3)
+
+    assert_equal false, cart.is_full?
+
     cart.add_product(product4)
 
     assert_equal true, cart.is_full?
@@ -89,7 +91,6 @@ class ShoppingCartTest < Minitest::Test
   end
 
   def test_it_can_get_percentage_occupied
-    skip
     cart = ShoppingCart.new("King Soopers", "30items")
     product1 = Product.new(:paper, 'toilet paper', 3.70, '10')
     product2 = Product.new(:meat, 'chicken', 4.50, '2')
@@ -103,7 +104,6 @@ class ShoppingCartTest < Minitest::Test
   end
 
   def test_it_can_get_sorted_products_by_quantity
-    skip
     cart = ShoppingCart.new("King Soopers", "30items")
     product1 = Product.new(:paper, 'toilet paper', 3.70, '10')
     product2 = Product.new(:meat, 'chicken', 4.50, '2')
@@ -119,7 +119,6 @@ class ShoppingCartTest < Minitest::Test
   end
 
   def test_it_can_get_a_product_breakdown
-    skip
     cart = ShoppingCart.new("King Soopers", "30items")
     product1 = Product.new(:paper, 'toilet paper', 3.70, '10')
     product2 = Product.new(:meat, 'chicken', 4.50, '2')

@@ -14,10 +14,8 @@ class ShoppingCart
   end
 
   def details
-    expected = {
-      name: @name,
-      capacity: @capacity
-    }
+    {name: @name, capacity: @capacity}
+    # {name: self.name, capacity: self.capacity} this also works
   end
 
   def total_number_of_products

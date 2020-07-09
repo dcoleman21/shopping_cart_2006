@@ -88,6 +88,9 @@ class ShoppingCartTest < Minitest::Test
     cart.add_product(product4)
 
     assert_equal [product1, product3], cart.products_by_category(:paper)
+    assert_equal [product2], cart.products_by_category(:meat)
+    assert_equal [product4], cart.products_by_category(:produce)
+
   end
 
   def test_it_can_get_percentage_occupied

@@ -114,7 +114,7 @@ class ShoppingCartTest < Minitest::Test
     cart.add_product(product1)
     cart.add_product(product2)
     cart.add_product(product3)
-    
+
     product4 = Product.new(:produce, 'apples', 0.99, '20')
     cart.add_product(product4)
 
@@ -134,7 +134,7 @@ class ShoppingCartTest < Minitest::Test
     cart.add_product(product4)
 
     expected = {
-      :meat=>[product2],
+      :meat=> [product2],
       :paper=> [product1, product3],
       :produce=> [product4]
     }

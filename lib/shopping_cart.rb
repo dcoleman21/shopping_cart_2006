@@ -5,7 +5,7 @@ class ShoppingCart
 
   def initialize(name, capacity)
     @name     = name
-    @capacity = capacity.to_i
+    @capacity = capacity.to_f
     @products = []
   end
 
@@ -35,10 +35,10 @@ class ShoppingCart
   end
 
   def percentage_occupied
-    (total_number_of_products / @capacity.to_f * 100).round(2)
+    ((total_number_of_products / @capacity) * 100).round(2)
   end
 
-  def sorted_products_by_quantity
+  def sorted_products_by_quantity #set it to a variable and call reverse on variable after block
     @products.sort_by do |product|
       product.quantity
     end.reverse

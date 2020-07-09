@@ -51,4 +51,13 @@ class ShoppingCart
     end
     result
   end
+
+  # def product_breakdown
+  #   by_category = products.map { |product| product.category}.uniq
+  #   breakdown = {}
+  #   by_category.each do |category|
+  #     breakdown[category] = by_category(category)
+  #   end
+  #   breakdown
+  # end
 end
